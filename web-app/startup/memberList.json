@@ -1,0 +1,33 @@
+{ "participants":
+    [
+        {"type": "Verifier", "name": "mazen", "patentIDs": "100,300,400,500", "id": "1"},
+        {"type": "Verifier", "name": "marwan", "patentIDs": "200", "id": "2"},
+        {"type": "Verifier", "name": "mary", "patentIDs": "500", "id": "3"},
+        {"type": "Verifier", "name": "anytime", "patentIDs": "700", "id": "4"},
+        {"type": "Owner", "name": "yes", "patentIDs": "100,500", "id": "5"},
+        {"type": "Owner", "name": "owner1", "patentIDs": "100,300,500", "id": "6"},
+        {"type": "Owner", "name": "eric", "patentIDs": "300,400,600", "id": "7"},
+        {"type": "Owner", "name": "abby", "patentIDs": "200,400,500", "id": "8"},
+        {"type": "Owner", "name": "kristen", "patentIDs": "200,400,700", "id": "9"},
+        {"type": "Publisher", "name": "speedmatters", "patentIDs": "100,200,300", "id": "10"},
+        {"type": "Publisher", "name": "wantitnow", "patentIDs": "400,500", "id": "11"},
+        {"type": "Auditor", "name": "info", "patentIDs": "100,200,300,400,500,600,700", "id": "12"},
+        {"type": "Publisher", "name": "dummypublisher", "patentIDs": "600,700", "id": "13"}
+    ],
+    "assets":
+    [   
+        {"type": "patent", "name": "computer", "id": "100", "ownerIDs": "5,6", "verifierID": "1" , "status" : "new" , "industry" : "Gov" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "mobile", "id": "200", "ownerIDs": "8,9", "verifierID": "2" , "status" : "new" , "industry" : "Banking" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "electricity", "id": "300", "ownerIDs": "6,7", "verifierID": "1" , "status" : "new" , "industry" : "Gov" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "bank", "id": "400", "ownerIDs": "7,8,9", "verifierID": "1" , "status" : "new" , "industry" : "Health care" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "android", "id": "500", "ownerIDs": "5,6,8", "verifierID": "3" , "status" : "new" , "industry" : "Banking" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "facebook", "id": "600", "ownerIDs": "7", "verifierID": "1" , "status" : "new" , "industry" : "Gov" , "priorArt" : "art" , "details" : "no details :)"},
+
+        {"type": "patent", "name": "youtube", "id": "700", "ownerIDs": "9", "verifierID": "4" , "status" : "new" , "industry" : "Health care" , "priorArt" : "art" , "details" : "no details :)"}
+    ]
+}

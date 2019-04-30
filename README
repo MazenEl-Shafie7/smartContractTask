@@ -1,0 +1,98 @@
+1. Install IBM Blockchain extension on VSCode
+	a. Open VScode inside contract folder
+	b. Package the smart contract smartContract.js
+	c. Install the chaincode
+	d. Instantiate the chaincode
+2. Run the Client by running thw following commands:
+	cd global-financing-blockchain/web-app/
+	npm install
+	npm start
+3. Postman:
+	*Setup Autoload:
+
+		Post: http://localhost:6001/setup/autoLoad
+	*Get Blockchain:
+
+		Post: http://localhost:6001/fabric/getBlockchain
+	*Get Assets(Patents):
+
+	Post: http://localhost:6001/fabric/admin/getAssets
+
+	*Get My Patents
+
+	Post: http://localhost:6001/fabric/client/getMyPatents
+
+		{
+  			"userId" : "verifier1@nbe.com"
+		}
+
+	*Add Member:
+
+		Post: http://localhost:6001/fabric/admin/addMember
+
+		Body:  
+		{
+  			"type" : "Owner",
+  			"id" : "20",
+  			"name" : "isaTshtghal"
+		}
+
+	*Get Members:
+
+		Post: http://localhost:6001/fabric/admin/getMembers
+
+		Body:
+		{
+  			"registry": "Owner"
+		}		
+
+
+	*Create Patent:
+
+		Post: http://localhost:6001/fabric/client/addPatent
+
+		Body:
+			{
+				"ownerIDs" : "5,6,7",
+				"verifierID":"4" ,
+				"patentID" : "800",
+				"name" : "TEST",
+				"industry" : "electro",
+				"priorArt" : "art" ,
+				"status" : "new",
+				"details" : "No details.."
+			}
+
+	*VerifyPatent:
+
+		Post: http://localhost:6001/fabric/client/patentAction
+
+		{
+  			"action" : "verifyPatent",
+  			"id" : "100",
+  			"ownersIDs": "5,6",
+  			"verifierID" : "1"
+		}
+
+	*rejectPatent:
+
+	Post: http://localhost:6001/fabric/client/patentAction
+
+		{
+  			"action" : "rejectPatent",
+  			"id" : "200",
+  			"ownersIDs": "8,9",
+  			"verifierID" : "2"
+		}
+
+	*publishPatent:
+	Post: http://localhost:6001/fabric/client/patentAction
+
+	{
+  		"action" : "publishPatent",
+  		"id" : "100",
+  		"ownerIDs": "5,6",
+  		"publisherID" : "10"
+	}
+
+
